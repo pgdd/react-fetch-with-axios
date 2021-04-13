@@ -5,14 +5,13 @@ export default function PopularJSRepos() {
   const [repos, setRepos] = useState([])
 
   useEffect(() => {
-    console.log("Coponent did mount")
+      console.log("Coponent did mount")
       let url = `https://api.github.com/search/repositories?q=language:javascript&sort=stars`
       axios.get(url)
-            .then((res) => {
-              console.log(res.data.items)
-              setRepos(res.data.items)
-            })
-
+              .then((res) => {
+                console.log(res.data.items)
+                setRepos(res.data.items)
+              })
   }, [])
 
   return (
@@ -46,9 +45,9 @@ export default function PopularJSRepos() {
 
 
 // 1 - Design your state
-// 2 - "Link" your stateto a piece of JSX within the component
+// 2 - "Link" your state to a piece of jsx within the component
 // 3 - Wait for the componenent to be mounted
 // 4 - Call the API
-// 5 - Set the new state with the value of the response
-// 6 - It trigerss a re-rendering
+// 5 - Change state with the value of the response
+// 6 - It trigers a re-rendering
 // 7 - Check your .map to see the value of each element of the map!

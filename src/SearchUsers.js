@@ -19,7 +19,7 @@ export default function () {
   }, [])
 
   useEffect(() => {
-    console.log("Query did update")
+    console.log("Query did update...")
     const CancelToken = axios.CancelToken;
     const source = CancelToken.source();
     console.log(source.token)
@@ -49,13 +49,12 @@ export default function () {
         type="text"
         value={query}
         onChange={(e) => {
-          console.log("I am typing in the input!!")
+          console.log("It is an input controlled by the state")
           console.log(e.target.value)
           setQuery(e.target.value)
         }}
       />
         {results.map((result) => {
-          console.log(result)
           return(<div>{result.login}</div>)
         })}
 
