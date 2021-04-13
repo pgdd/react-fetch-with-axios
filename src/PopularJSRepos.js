@@ -15,12 +15,6 @@ export default function PopularJSRepos() {
 
   }, [])
 
-  // Act on the component when it is mounted ok
-    // To make an http call
-    // Use the response
-    // Change the value of the repos state, with this response
-
-
   return (
     <div>
       <h2>Popular JS repos</h2>
@@ -52,9 +46,9 @@ export default function PopularJSRepos() {
 
 
 // 1 - Design your state
-// 2 - Link your state, to a piece of jsx within the component
-// 3 - Wait the componenent to be mounted
+// 2 - "Link" your stateto a piece of JSX within the component
+// 3 - Wait for the componenent to be mounted
 // 4 - Call the API
-// 5 - Change state with the value of the response
-// 6 - It trigerss a re rendering
+// 5 - Set the new state with the value of the response
+// 6 - It trigerss a re-rendering
 // 7 - Check your .map to see the value of each element of the map!
